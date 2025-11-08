@@ -46,6 +46,7 @@ public class User implements UserDetails {
     private UserRole role;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "status")
     private UserStatus status;
 
     @OneToOne(mappedBy = "provider", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
@@ -77,7 +78,8 @@ public class User implements UserDetails {
 
     @Column(name = "profile_completion_status")
     @Enumerated(EnumType.STRING)
-    private ProfileCompletionStatus profileCompletionStatus;
+    @Builder.Default
+    private ProfileCompletionStatus profileCompletionStatus = ProfileCompletionStatus.NOT_STARTED;
 
     // New relationships - all optional (nullable)
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
