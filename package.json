@@ -1,7 +1,7 @@
 {
-  "name": "GynaId-cross-platform",
+  "name": "GynAid-cross-platform",
   "version": "1.0.0",
-  "description": "GynaId - Cross-Platform Reproductive Health Application",
+  "description": "GynAid - Cross-Platform Reproductive Health Application",
   "private": true,
   "scripts": {
     "start:all": "node scripts/start-all.js",
